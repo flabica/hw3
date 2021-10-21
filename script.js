@@ -52,7 +52,7 @@ function clearAll(){
     let table = document.getElementById('grid'); //get the grid
     for (let i=0; i<table.clientHeight; i++)
     {
-        table[i].style.background = '' //clears the cell
+        table[i].style.background = ''; //clears the cell
     }   
 }
 
