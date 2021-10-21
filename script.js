@@ -48,6 +48,12 @@ function fill(){
 
 function clearAll(){
     alert("Clicked Clear All")
+
+    let table = document.getElementById('grid'); //get the grid
+    for (let i=0; i<table.clientHeight; i++)
+    {
+        table[i].style.background = '' //clears the cell
+    }   
 }
 
 function fillU(){
