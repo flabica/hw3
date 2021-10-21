@@ -5,6 +5,19 @@ let colorSelected;
 //Add a row
 function addR() {
     alert("Clicked Add Row")
+    // if columns is 0, we increment numCols since the first row is also first column 
+    if(numCols == 0){
+        numCols++;
+    }
+       
+    let table = document.getElementById('grid'); //get the grid
+    let row = table.insertRow(); // insert row
+    
+    // insert cells by looping through the amount of columns 
+    for (let i = 0; i < numCols; i++) {
+        row.insertCell(i); 
+    }   
+    numRows++; //increment the number of rows
 }
 //Add a column
 function addC() {
