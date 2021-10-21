@@ -9,10 +9,10 @@ function addR() {
     if(numCols == 0){
         numCols++;
     }
-       
+
     let table = document.getElementById('grid'); //get the grid
     let row = table.insertRow(); // insert row
-    
+
     // insert cells by looping through the amount of columns 
     for (let i = 0; i < numCols; i++) {
         row.insertCell(i); 
@@ -27,6 +27,10 @@ function addC() {
 //Remove a row
 function removeR() {
     alert("Clicked Remove Row")
+
+    let table = document.getElementById('grid'); //get the grid element
+    table.deleteRow(numRows-1) //call the built in deleteRow function to delete row
+    numRows--; //decrement number of rows
 }
 //Remove a column
 function removeC() {
