@@ -56,10 +56,10 @@ function fill(){
 function clearAll(){
     alert("Clicked Clear All")
 
-    let table = document.getElementById('td'); //get the grid
-    for (let i=0; i<table.clientHeight; i++)
+    let table = document.getElementsByTagName('td'); //get the grid
+    for (let i=0; i<table.length; i++)
     {
-        table[i].style.background = ''; //clears the cell
+        table[i].style.background = ''; //clears the cells by setting to empty/og color
     }   
 }
 
