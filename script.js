@@ -44,12 +44,19 @@ function selected(){
 
 function fill(){
     alert("Clicked Fill All")
+
+    let table = document.getElementsByTagName('td');
+    for (let i=0; i<table.length; i++)
+    {
+        table[i].style.background = colorSelected;
+    }
+    
 }
 
 function clearAll(){
     alert("Clicked Clear All")
 
-    let table = document.getElementById('grid'); //get the grid
+    let table = document.getElementById('td'); //get the grid
     for (let i=0; i<table.clientHeight; i++)
     {
         table[i].style.background = ''; //clears the cell
