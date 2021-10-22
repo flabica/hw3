@@ -71,4 +71,11 @@ function clearAll(){
 
 function fillU(){
     alert("Clicked Fill All Uncolored")
+
+    let table = document.getElementsByTagName('td'); //get the grid
+    let color = document.getElementById("selectedID").value;
+    for (let i=0; i<table.length; i++)
+    {
+        table[i].style.background = color; //fills grid elements with selected color
+    }  
 }
