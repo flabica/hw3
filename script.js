@@ -19,29 +19,27 @@ function addR() {
     }   
     numRows++; //increment the number of rows
 }
+
 //Add a column
 function addC() 
 {
     alert("Clicked Add Col")
 
-    if(numRows==0)
+    if(numRows==0)//if rows is 0, we increment numRows since the first col is also first row
     {
         return addR() 
     }
-    for (let i=numCols++; i<numCols; i++)
+    let table = document.getElementById('grid');
+    for (let i=numCols++; i<numCols; i++)//insert cells byn looping the amount of rows 
     {
-        for (let j=0; j<numRows; j++)
+        for (let j=0; j<numRows; j++)//every cell in the row needs to be included 
         {
-            gird.rows[j].insertCell(i);
-            //let newCell=grid.rows[j].insertCell(i); 
-            // newCell.appendChild(newText); 
-            // newCell.onclick=funtion()
-            // {
-            //     return changeColor(this.parentElement.rowIndex, this.cellIndex+1)
-            // }
+            table.rows[j].insertCell(i);//insert the row cells, the same number in each column 
+           
         }
     }
 }
+
 
 //Remove a row
 function removeR() {
@@ -54,12 +52,12 @@ function removeR() {
 //Remove a column
 function removeC() {
     alert("Clicked Remove Col")
-
-    let table =document.getElementById('grid')
-    table.deleteCols[numCols-1]
-
-    //col.remove()
-    numCols--;
+    let table = document.getElementById('grid');
+    for(var i=0; i < numRows; i++)//based of row cells
+    {
+        table.rows[i].deleteCell(numCols-1)//delete the column 
+    }
+numCols--//delete 
 }
 
 //sets global var for selected color
