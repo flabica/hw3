@@ -45,10 +45,16 @@ function selected(){
 function fill(){
     alert("Clicked Fill All")
 
-    let table = document.getElementsByTagName('td');
-    for (let i=0; i<table.length; i++)
+    if (colorSelected == null) //if no color was chosen (left on 'SELECT')
     {
-        table[i].style.background = colorSelected;
+        alert("Select a color first") //returns an alert that a color should be selected
+    }
+    else{
+        let table = document.getElementsByTagName('td');
+        for (let i=0; i<table.length; i++)
+        {
+            table[i].style.background = colorSelected; //fills the cell to the selected color
+        }
     }
     
 }
