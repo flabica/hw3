@@ -102,6 +102,9 @@ function fillU(){
     let color = document.getElementById("selectedID").value;
     for (let i=0; i<table.length; i++)
     {
-        table[i].style.background = color; //fills grid elements with selected color
+        if (table[i].style.background == '')
+        {
+            table[i].style.background = color; //fills uncolored grid elements with selected color
+        }
     }  
 }
