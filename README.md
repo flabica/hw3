@@ -9,4 +9,4 @@ Group Members:
 
     Rithika Chowdhury - ri71
     
-    site: https://flabica.github.io/hw3-grid_maker/
+    https://flabica.github.io/hw3-grid_maker/
