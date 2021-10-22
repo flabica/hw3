@@ -106,6 +106,5 @@ function fillU(){
         {
             table[i].style.background = color; //fills uncolored grid elements with selected color
         }
-        
     }  
 }
