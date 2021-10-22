@@ -88,7 +88,7 @@ function fill(){
 function clearAll(){
     alert("Clicked Clear All")
 
-    let table = document.getElementsByTagName('td'); //get the grid
+    let table = document.getElementsByTagName('td'); //get the cells
     for (let i=0; i<table.length; i++)
     {
         table[i].style.background = ''; //clears the cells by setting to empty/og color
@@ -98,7 +98,7 @@ function clearAll(){
 function fillU(){
     alert("Clicked Fill All Uncolored")
 
-    let table = document.getElementsByTagName('td'); //get the grid
+    let table = document.getElementsByTagName('td'); //get the cells
     let color = document.getElementById("selectedID").value;
     for (let i=0; i<table.length; i++)
     {
