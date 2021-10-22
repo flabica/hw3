@@ -20,8 +20,27 @@ function addR() {
     numRows++; //increment the number of rows
 }
 //Add a column
-function addC() {
+function addC() 
+{
     alert("Clicked Add Col")
+
+    if(numRows==0)
+    {
+        return addR() 
+    }
+    for (let i=numCols++; i<numCols; i++)
+    {
+        for (let j=0; j<numRows; j++)
+        {
+            gird.rows[j].insertCell(i);
+            //let newCell=grid.rows[j].insertCell(i); 
+            // newCell.appendChild(newText); 
+            // newCell.onclick=funtion()
+            // {
+            //     return changeColor(this.parentElement.rowIndex, this.cellIndex+1)
+            // }
+        }
+    }
 }
 
 //Remove a row
@@ -35,7 +54,14 @@ function removeR() {
 //Remove a column
 function removeC() {
     alert("Clicked Remove Col")
+
+    let table =document.getElementById('grid')
+    table.deleteCols[numCols-1]
+
+    //col.remove()
+    numCols--;
 }
+
 //sets global var for selected color
 function selected(){
     colorSelected = document.getElementById("selectedID").value;
